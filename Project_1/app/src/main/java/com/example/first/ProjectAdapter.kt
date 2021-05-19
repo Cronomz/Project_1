@@ -28,9 +28,10 @@ class ProjectAdapter (private val projects: MutableList<ItemProject>) : Recycler
         val curProj = projects[position]
         holder.itemView.apply {
             button_project.text = curProj.name
+            project_progress_bar.progress = 1
 
             button_project.setOnClickListener{
-
+                project_progress_bar.progress = 10
             }
         }
     }
