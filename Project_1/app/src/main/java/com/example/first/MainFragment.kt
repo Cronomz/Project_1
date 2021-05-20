@@ -6,9 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.first.databinding.ProjectPageBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainFragment: Fragment() {
+
+    private lateinit var projectAdapter: ProjectAdapter
+
     private var _binding: ProjectPageBinding? = null
 
     private val binding get() = _binding!!
