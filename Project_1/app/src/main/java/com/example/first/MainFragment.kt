@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.first.databinding.ProjectPageBinding
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.project_page.*
 
 class MainFragment: Fragment() {
 
@@ -30,7 +31,12 @@ class MainFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        projectAdapter = ProjectAdapter(mutableListOf())
+        rvProjectItems.adapter = projectAdapter
 
+        add_button.setOnClickListener{
+            val projectTitle = text_input.text.toString()
+        }
     }
 
     override fun onDestroyView() {

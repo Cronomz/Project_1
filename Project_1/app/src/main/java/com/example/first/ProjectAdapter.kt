@@ -31,7 +31,7 @@ class ProjectAdapter (private val projects: MutableList<ItemProject>) : Recycler
             project_progress_bar.progress = 1
 
             button_project.setOnClickListener{
-                project_progress_bar.progress = 10
+                project_progress_bar.progress = 2
             }
         }
     }
